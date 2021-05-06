@@ -6,7 +6,4 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    volumes:
-      - .:/app
     image: nodos-app
-    command: npm test
