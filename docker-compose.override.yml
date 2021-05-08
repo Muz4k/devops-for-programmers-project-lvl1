@@ -2,6 +2,10 @@ version: '3'
 
 services:
   app:
+    build:
+      context: .
+      dockerfile: Dockerfile
     volumes:
       - .:/app
-    command: npm test
+    image: nodos-app
+    command: nodos server -h 0.0.0.0
