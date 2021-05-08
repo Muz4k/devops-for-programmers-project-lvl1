@@ -3,7 +3,7 @@ name: tests
 on:
   push:
     branches:
-      - master
+      - main
 
 env:
   APP_IMAGE_NAME: 3102033310121/devops-for-programmers-project-lvl1
