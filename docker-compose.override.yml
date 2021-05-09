@@ -10,6 +10,7 @@ services:
     image: nodos-app
     command: nodos server -h 0.0.0.0
   caddy:
+    container_name: caddy
     image: caddy:2
     ports:
       - "80:80"
