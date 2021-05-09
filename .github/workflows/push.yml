@@ -19,7 +19,9 @@ jobs:
 
       - name: Test
         run: make compose-test
-
+        env:
+          NODOS_DB_USERNAME: postgres
+          NODOS_DB_PASSWORD: postgres
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
