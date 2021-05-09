@@ -11,7 +11,7 @@ dev-up:
 	docker-compose build
 	docker-compose up -d
 prod-up:
-	docker-compose build
+	docker-compose -f docker-compose.yml -f docker-compose.production.yml build
 	docker-compose -f docker-compose.yml -f docker-compose.production.yml up -d
 
 push-image:
