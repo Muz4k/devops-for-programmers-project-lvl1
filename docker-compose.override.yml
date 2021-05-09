@@ -9,3 +9,12 @@ services:
       - .:/app
     image: nodos-app
     command: nodos server -h 0.0.0.0
+  caddy:
+    image: caddy:2
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+    - ./services/caddy/Caddyfile:/etc/caddy/Caddyfile
+    depends_on:
+      - app
