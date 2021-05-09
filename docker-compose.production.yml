@@ -5,7 +5,5 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.production
-    ports:
-      - "8080:8080"
     image: devops-for-programmers-project-lvl1
     command: nodos server -h 0.0.0.0
