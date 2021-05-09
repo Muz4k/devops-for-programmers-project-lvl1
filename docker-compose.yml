@@ -8,3 +8,11 @@ services:
       dockerfile: Dockerfile.production
     image: devops-for-programmers-project-lvl1
     command: npm test
+    depends_on:
+      - db
+  db:
+    container_name: db
+    image: postgres:13.2
+    environment:
+      POSTGRES_USER: ${NODOS_DB_USERNAME}
+      POSTGRES_PASSWORD: ${NODOS_DB_PASSWORD}
