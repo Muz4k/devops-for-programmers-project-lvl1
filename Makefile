@@ -9,7 +9,7 @@ compose-test:
 
 dev-up:
 	docker-compose build
-	docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d
+	docker-compose up -d
 prod-up:
 	docker-compose build
 	docker-compose -f docker-compose.yml -f docker-compose.production.yml up -d
