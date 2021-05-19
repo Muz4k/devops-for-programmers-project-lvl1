@@ -4,9 +4,6 @@ server:
 test:
 	npm -s test
 
-compose-test:
-	docker-compose up --abort-on-container-exit
-
 dev-up:
 	docker-compose build
 	docker-compose up -d
