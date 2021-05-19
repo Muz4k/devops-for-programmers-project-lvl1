@@ -5,14 +5,14 @@ test:
 	npm -s test
 
 compose-test:
-	docker-compose -f docker-compose.yml up --abort-on-container-exit
+	docker-compose up --abort-on-container-exit
 
 dev-up:
 	docker-compose build
 	docker-compose up -d
 prod-up:
-	docker-compose -f docker-compose.yml -f docker-compose.production.yml build
-	docker-compose -f docker-compose.yml -f docker-compose.production.yml up -d
+	docker-compose -f docker-compose.yml build
+	docker-compose -f docker-compose.yml up -d
 
 push-image:
 	docker build . -f Dockerfile.production -t 3102033310121/devops-for-programmers-project-lvl1
